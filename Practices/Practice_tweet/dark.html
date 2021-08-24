@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+
+    <title>Twitter</title>
+    <style>
+        .avatar_style{
+            width:50px;
+            border-radius: 25px;
+            vertical-align: middle;
+            margin: 2px;
+            /*align-items: center;*/
+        }
+        .body_style{
+            width: 450px;
+            margin: auto;
+            background-color: #16202A;
+        }
+
+        .icon_style{
+            margin-left: 35px;
+            /*margin-right: 20px;*/
+
+        }
+        .count_style{
+            margin-left: 20px;
+            margin-right: 20px;
+
+
+        }
+        .name_style{
+            font-weight: bold;
+            font-size: 15px;
+            color: white;
+            margin-left: 10px;
+        }
+        .username_style{
+            font-size: 15px;
+            color: gray;
+            display: block;
+            margin-left: 10px;
+
+        }
+        .tweet_style{
+            font-size: 25px;
+            color: white;
+
+        }
+        .text_style{
+            font-family:'Nunito', sans-serif;
+        }
+        .time_style{
+            font-size: 15px;
+            color: grey;
+
+        }
+        .container{
+            display: flex;
+            align-items: center;
+
+        }
+    </style>
+</head>
+<body class="body_style">
+<br><br><br>
+
+<div style="flex-direction: row;">
+    <div class="container">
+        <div>
+            <img src="img/avatar.jpg" class="avatar_style" alt="">
+        </div>
+        <div>
+            <span class="text_style name_style">Seyed Ali Dehghan</span>
+            <span class="text_style username_style">@UserName</span>
+        </div>
+        <span class="material-icons" style="color: grey;margin-left: 185px">expand_more</span>
+
+
+    </div>
+
+
+
+
+<!--    <span class="text_style name_style">name</span>-->
+<!--    <span class="text_style username_style">@UserName</span>-->
+</div>
+<div>
+    <div style="margin-top: 3px">
+        <span class="text_style tweet_style" style="display: block;margin-top: 8px;">Your tweet here!</span>
+    </div>
+    <div style="margin-top: 10px">
+        <span class="text_style time_style">12:00 PM . Jun 1, 2020</span>
+    </div>
+    <span  style="color:gray;width: 400px;float: left">
+        <hr>
+    </span>
+    <br>
+    <div style="display: flex">
+<!--        <span class="material-icons icon_style" style="color: grey;">chat_bubble_outline</span>-->
+        <span style="margin-left: 10px"><img src="img/reply.png" alt=""></span>
+        <span class="text_style count_style" style="color: grey;">44</span>
+<!--        <span class="material-icons icon_style" style="color: #33B97a">autorenew</span>-->
+        <span class="icon_style"><img src="img/retweet.png" alt=""></span>
+        <span class="text_style count_style" style="color: #33B97a">3</span>
+        <span class="material-icons icon_style" style="color: #e6235f">favorite</span>
+        <span class="text_style count_style" style="color: #e6235f">3,500</span>
+<!--        <span class="material-icons icon_style" style="color: gray">upgrade</span>-->
+        <span class="icon_style"><img src="img/up.png" alt=""></span>
+    </div>
+</div>
+</body>
+</html>
