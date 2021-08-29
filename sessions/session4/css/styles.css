@@ -1,0 +1,48 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.main_container{
+    width: 800px;
+    margin: auto;
+    text-align: center;
+}
+.main_container h2{
+    color: gray;
+    font-size: 14px;
+    margin-top: 1px;
+}
+.main_container p{
+    color: gray;
+    font-size: 14px;
+    text-align: left;
+}
+div h3:first-of-type{
+    font-weight: bold;
+    font-size: 14px;
+    color: #424242;
+    text-align: left;
+}
+div h4:first-of-type{
+    font-weight: bolder;
+    font-size: 16px;
+    text-align: left;
+}
+#avatar{
+    border-radius: 100px;
+    width: 60px;
+    border: 7px solid white;
+
+}
+#icon_container{
+    text-align: right;
+}
+#icon_container span{
+    color: #fff;
+    background-color: #00695C;
+    padding: 5px;
+    border-radius: 3px;
+}
+#divider{
+    border: 1px solid grey;
+    margin: 5px 0;
+}
