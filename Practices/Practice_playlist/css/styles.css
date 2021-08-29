@@ -1,0 +1,36 @@
+.avatar_style{
+    width: 40px;
+    vertical-align: middle;
+}
+.main{
+    margin-top: 90px;
+}
+.main_title {
+    display: inline-block;
+    font-size: 17px;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+.music_block{
+    display: flex;
+    align-items: center;
+}
+.container{
+    display: flex;
+    align-items: center;
+}
+.music_name{
+    display: inline-block;
+    font-size: 15px;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+.artist_name{
+    display: inline-block;
+    font-size: 13px;
+    color: gray;
+    font-family: 'Poppins', sans-serif;
+}
+.drag_icon{
+    color: gray;
+}
