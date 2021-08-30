@@ -1,0 +1,8 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.main_container{
+    width: 800px;
+    margin: auto;
+    text-align: center;
+}
