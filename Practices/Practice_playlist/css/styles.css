@@ -7,7 +7,7 @@
 }
 .main_title {
     display: inline-block;
-    font-size: 17px;
+    font-size: 14px;
     color: black;
     font-family: 'Poppins', sans-serif;
 }
@@ -32,5 +32,5 @@
     font-family: 'Poppins', sans-serif;
 }
 .drag_icon{
-    color: gray;
+    color: #BDBDBD;
 }
