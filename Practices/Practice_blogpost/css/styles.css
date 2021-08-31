@@ -38,7 +38,8 @@ body{
     padding: 5px;
     border-radius: 3px;
     display: inline-flex;
-    width: 15%;
+    width: 14.95%;
+    height: 22px;
 }
 #avatar{
     border-radius: 100px;
