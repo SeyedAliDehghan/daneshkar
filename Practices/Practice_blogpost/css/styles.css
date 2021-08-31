@@ -6,3 +6,47 @@ body{
     margin: auto;
     text-align: center;
 }
+.main_container h1{
+    text-align: left;
+    /*font-weight: 700;*/
+}
+.main_container p:first-of-type{
+    color: black;
+    font-size: 14px;
+    text-align: left;
+}
+.main_container p{
+    color: grey;
+    font-size: 14px;
+    text-align: left;
+}
+.divider{
+    border: 1px solid grey;
+    margin: 5px 0;
+    color: grey;
+}
+.icon_style{
+    color: #fff;
+    background-color: #BDBDBD;
+    padding: 5px;
+    border-radius: 3px;
+    display: inline-flex;
+}
+.social_style{
+
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    display: inline-flex;
+    width: 15%;
+}
+#avatar{
+    border-radius: 100px;
+    width: 60px;
+    float: left;
+    margin-left: 40px;
+}
+.about_container{
+    display: flex;
+    align-items: center;
+}
