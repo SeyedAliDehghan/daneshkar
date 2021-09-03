@@ -26,11 +26,12 @@ body{
     color: grey;
 }
 .icon_style{
-    color: #fff;
-    background-color: #BDBDBD;
+    color: #424242;
+    background-color: #F5F5F5;
     padding: 5px;
     border-radius: 3px;
     display: inline-flex;
+    width: 30%;
 }
 .social_style{
 
@@ -47,12 +48,65 @@ body{
     float: left;
     margin-left: 40px;
 }
+#about_box{
+    flex-direction: row;
+    background-color: #E0E0E0;
+}
+#cover{
+    width: 800px;
+}
+#about_text{
+    text-align: left;
+    margin-left: 10px;
+}
 .about_container{
     display: flex;
     align-items: center;
 }
-@media screen and (min-width:240px ){
-    body{
-        background: green;
+@media screen and (max-width: 700px){
+    #about_box{
+        /*background-color: red;*/
     }
+    .main_container{
+        width: 500px;
+        margin: auto;
+        text-align: center;
+    }
+    .social_style{
+
+        color: #fff;
+        padding: 5px;
+        border-radius: 3px;
+        display: inline-flex;
+        width: 29.9%;
+        height: 22px;
+    }
+    .icon_style{
+        width: 100%;
+        display: block;
+    }
+
+    #cover{
+        width: 500px;
+    }
+
+    /*sda*/
+    #about_text{
+        display: block;
+        text-align: center;
+        margin-left: 10px;
+        margin-top: 5px;
+    }
+    .about_container{
+        display: inline-grid;
+        align-items: center;
+    }
+    #avatar{
+        margin-left: 225px;
+    }
+    #about_box{
+        flex-direction: row-reverse;
+        /*background-color: red;*/
+    }
+
 }
