@@ -1,0 +1,9 @@
+@font-face {
+    font-family: iransans;
+    src: url("../font/iransans.ttf")format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    font-family: iransans;
+}
