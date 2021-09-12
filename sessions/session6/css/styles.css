@@ -1,0 +1,41 @@
+.container {
+    background-color: grey;
+    display: grid;
+    height: 100vh;
+    grid-template: repeat(3, 33fr)/repeat(3, 33fr);
+    grid-template-areas: "sidebar header header"
+                            "sidebar gallery gallery"
+                            "sidebar gallery gallery";
+    font-family: 'Open Sans', sans-serif;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: orange;
+}
+.header{
+    grid-area: header;
+    background-color: dodgerblue;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+.gallery{
+    grid-area: gallery;
+    background-color: grey;
+    display: grid;
+    grid-template: repeat(2,50fr)/repeat(2,50fr);
+    /*justify-items: center;*/
+}
+.sidebar-items{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+img{
+    width: 628px;
+    height: 179px;
+}
