@@ -2,55 +2,20 @@
     background-color: grey;
     display: grid;
     height: 100vh;
-    grid-template-rows: repeat(3, 33fr);
-    grid-template-columns: 20fr 40fr 40fr;
+    grid-template: repeat(3, 33fr)/repeat(3, 33fr);
     grid-template-areas: "sidebar header header"
                             "sidebar gallery gallery"
                             "sidebar gallery gallery";
-    font-family: 'Marcellus', serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.sidebar {
+.sidebar{
     grid-area: sidebar;
-    background-color: #FFFFFF;
+    background-color: orange;
 }
-
-.sidebar-items {
-    display: flex;
-    flex-direction: column;
-    padding: 3rem 0 0 4rem;
-    /*line-height: 0.1rem;*/
-}
-
-.sidebar_head {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #012B55;
-    margin: 0;
-    padding: 0;
-}
-.sidebar_links{
-    color: #8597A8;
-}
-
-.sidebar_menu_head {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #012B55;
-    margin-top: 2.5rem;
-}
-
-ion-icon {
-    background: #eaebec;
-    padding:0.5rem;
-    border-radius: 50%;
-    color: #012B55;
-}
-
-
-.header {
+.header{
     grid-area: header;
-    background-color: #F7F8F9;
+    background-color: dodgerblue;
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -58,43 +23,19 @@ ion-icon {
     justify-content: center;
     align-content: center;
 }
-
-.header p {
-    text-align: center;
-    margin: 0 80px 0 80px;
-    color: #012B55;
-    font-size: 1.3rem;
-    font-weight: 400;
-}
-
-.header h4 {
-    color: #8597A8;
-    font-weight: 600;
-}
-
-.gallery {
+.gallery{
     grid-area: gallery;
     background-color: grey;
     display: grid;
-    grid-template: repeat(2, 50fr)/repeat(2, 50fr);
-    justify-content: center;
+    grid-template: repeat(2,50fr)/repeat(2,50fr);
     /*justify-items: center;*/
 }
-
-.image-fig {
-    width: 100%;
-    height: 100%;
-    border: 1px solid blue;
+.sidebar-items{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
 }
-
-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.div_bg {
-    background-image: url("../img/cover.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+img{
+    width: 628px;
+    height: 179px;
 }
