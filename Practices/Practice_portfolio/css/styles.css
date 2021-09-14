@@ -1,0 +1,144 @@
+.container {
+    background-color: grey;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 20fr 40fr 40fr;
+    grid-template-rows: repeat(3, 33fr);
+    grid-template-areas: "sidebar header header"
+                            "sidebar gallery gallery"
+                            "sidebar gallery gallery";
+    font-family: 'Marcellus', serif;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-color:#ffffff;
+    padding-left: 2rem;
+    padding-top: 2rem;
+
+}
+.sidebar_head{
+    font-size: 1.3rem;
+    color: #012b55;
+    font-weight: bold;
+    margin: 0;
+
+}
+.sidebar_h2{
+    font-size: 1rem;
+    color: #012b55;
+    font-weight: bold;
+    margin: 0;
+}
+.links{
+    color: #41576d;
+    font-weight: bold;
+    margin-top: 0.3rem;
+}
+.links p{
+    margin-top: 0.1rem;
+}
+.social{
+    margin-top: 0.5rem;
+}
+ion-icon{
+    background: #e5e9ee;
+    padding:0.5rem;
+    border-radius: 50%;
+}
+.header{
+    grid-area: header;
+    background-color: #f7f8f9;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+.header p{
+    text-align: center;
+    padding: 0 3rem 0 3rem;
+    font-size: 1.2rem;
+    color: #012b55;
+    font-weight: bold;
+}
+.header h4{
+    color: #62788e;
+}
+.gallery{
+    grid-area: gallery;
+    background-color: grey;
+    display: grid;
+    grid-template: repeat(2,50fr)/repeat(2,50fr);
+    /*justify-items: center;*/
+}
+.sidebar-items{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.menubar{
+    text-align: right;
+    display: none;
+}
+.div_bg{
+    background-image: url("../img/cover.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+@media screen and (max-width: 700px){
+    .container {
+        background-color: grey;
+        display: grid;
+        height: 100rem;
+        grid-template-rows: repeat(3, 33fr);
+        grid-template-columns: 95fr;
+        grid-template-areas: "sidebar"
+                            "header"
+                            "gallery";
+        font-family: 'Marcellus', serif;
+    }
+    .gallery{
+        grid-area: gallery;
+        background-color: grey;
+        display: grid;
+        grid-template-rows: repeat(4, 20rem);
+        grid-template-columns: 100fr;
+        /*justify-items: center;*/
+    }
+    .sidebar_h2{display: none}
+    .links{display: none}
+    .social{display: none}
+    .sidebar_head{
+        text-align: left;
+        padding-bottom: 1rem;
+    }
+    .header p{
+        text-align: center;
+        padding: 0 3rem 0 3rem;
+        font-size: 1rem;
+        color: #012b55;
+        font-weight: 200;
+    }
+    .sidebar_head{
+        width: 60%;text-align: left;display: inline-block;
+    }
+    .menubar{
+        width:40%;text-align: right;display: inline-block;float: right;
+    }
+    .sidebar-items{
+        display: flex;
+        flex-direction: row;
+
+    }
+    ion-icon{
+        background: none;
+        font-size: 25px;
+        padding:0;
+        border-radius: 0;
+    }
+
+}
