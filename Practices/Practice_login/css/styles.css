@@ -1,0 +1,20 @@
+body {
+
+    margin: 0;
+}
+
+.my_main_container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template: 100fr/repeat(2, 50fr);
+    grid-template-areas: "login_image login_input";
+
+}
+
+.login_image {
+    background-image: url("../img/cover.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
