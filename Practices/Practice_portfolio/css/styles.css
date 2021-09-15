@@ -3,7 +3,7 @@
     display: grid;
     height: 100vh;
     grid-template-columns: 20fr 40fr 40fr;
-    grid-template-rows:  20fr 35fr 35fr 10fr;
+    grid-template-rows:  20fr 40fr 40fr 5fr;
     grid-template-areas: "sidebar header header"
                             "sidebar gallery gallery"
                             "sidebar gallery gallery"
@@ -42,7 +42,7 @@
 .social{
     margin-top: 0.5rem;
 }
-ion-icon{
+.social ion-icon{
     background: #e5e9ee;
     padding:0.5rem;
     border-radius: 50%;
@@ -126,6 +126,7 @@ ion-icon{
         display: flex;
         flex-direction: column;
         text-align: center;
+        margin-top: 1.5rem;
     }
     .gallery{
         grid-area: gallery;
@@ -155,12 +156,21 @@ ion-icon{
     .menubar{
         width:40%;text-align: right;display: inline-block;float: right;
     }
+    .menubar ion-icon{
+        font-size: 1.5rem;
+    }
     .sidebar-items{
         display: flex;
         flex-direction: row;
 
     }
-    ion-icon{
+
+    .social ion-icon {
+        background: #ced4d9;
+        padding:0.6rem;
+        border-radius: 50%;
+    }
+    .footer ion-icon {
         background: #ced4d9;
         padding:0.6rem;
         border-radius: 50%;
