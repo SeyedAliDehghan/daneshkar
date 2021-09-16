@@ -5,16 +5,52 @@
     <title>Login</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 
 </head>
 <body>
 <div class="my_main_container">
     <div class="login_image"></div>
     <div class="login_input">
-        <form action="">
-            <label for="">Username or Email:</label>
-            <input type="text">
+        <div class="logos">
+            <div class="logo-container"></div>
+            <h2 class="welcome-title">Welcome to lovebirds</h2>
+        </div>
+
+        <form style="margin-bottom: 0">
+            <label style="color: #858585;font-weight: 400" for="username">Username or Email</label>
+            <input typeof="text" id="username">
+
+            <label style="color: #858585;font-weight: 400" for="password">Password</label>
+            <input type="password" id="password">
         </form>
+        <a style="text-align: right;color: grey;
+        margin-top: 4px;font-size: 1.3rem">
+            Forget password?
+        </a>
+        <div style="text-align: center">
+            <button type="submit" id="submit">
+                Sign in
+            </button>
+        </div>
+        <div style="text-align: center;margin-top: 3rem">------------or------------</div>
+        <div class="google_div">
+            <button type="submit" id="google-sign-in">
+                <span>
+                    <ion-icon name="logo-google"></ion-icon>
+                </span>
+                <span>
+                    Sign in with Google
+                </span>
+            </button>
+        </div>
+        <div style="text-align: center;color: grey;font-weight: 300;margin-top: 2rem;margin-bottom: 2rem">
+            new Lovebirds?<u> Create Account</u>
+        </div>
     </div>
 </div>
 </body>

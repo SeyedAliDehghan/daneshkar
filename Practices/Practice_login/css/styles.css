@@ -1,20 +1,121 @@
 body {
-
+    font-family: 'Poppins', sans-serif;
     margin: 0;
+
 }
 
 .my_main_container {
-    width: 100vw;
-    height: 100vh;
+    width: 80vw;
+    height: 80vh;
     display: grid;
     grid-template: 100fr/repeat(2, 50fr);
     grid-template-areas: "login_image login_input";
-
+    background-color: white;
+    margin: 3.5rem auto;
 }
 
 .login_image {
-    background-image: url("../img/cover.jpg");
+    grid-area: login_image;
+    background-image: url("../img/bird.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.login_input {
+    grid-area: login_input;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 10rem;
+}
+
+.logos {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+
+}
+
+.welcome-title {
+    font-size: 2rem;
+    color: #adadad;
+    font-weight: 400;
+}
+
+.logo-container {
+    width: 300px;
+    height: 50px;
+    /*text-align: center;*/
+    background-image: url("../img/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    margin-bottom: 10rem;
+}
+
+#username, #password {
+    border: none;
+    border-bottom: 2px solid #adadad;
+}
+
+#submit {
+    width: 40%;
+    border-radius: 30px;
+    background-color: #595959;
+}
+
+#google-sign-in {
+    background-color: white;
+    border: none;
+    color: black;
+}
+
+ion-icon {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.google_div {
+
+    margin-top: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+@media screen and (max-width: 700px) {
+    .my_main_container {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 100fr;
+        grid-auto-rows: 100fr;
+        grid-template-areas: "login_input";
+
+    }
+
+    .login_image {
+        grid-area: login_image;
+        background-image: url("../img/bird_v.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .logo-container {
+        margin-bottom: 8rem;
+        margin-top: 5rem;
+    }
+
+    .welcome-title {
+        font-size: 2rem;
+        color: #adadad;
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
 }
