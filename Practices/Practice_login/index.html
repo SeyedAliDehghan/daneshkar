@@ -5,8 +5,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
@@ -32,21 +31,22 @@
         margin-top: 4px;font-size: 1.3rem">
             Forget password?
         </a>
-        <div style="text-align: center">
+        <div style="text-align: center;margin-top: 1rem">
             <button type="submit" id="submit">
                 Sign in
             </button>
         </div>
-        <div style="text-align: center;margin-top: 3rem">------------or------------</div>
+<!--        <div style="text-align: center;margin-top: 3rem;border-spacing: 0">&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;or&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</div>-->
+        <div>
+            <hr>
+        </div>
         <div class="google_div">
-            <button type="submit" id="google-sign-in">
-                <span>
-                    <ion-icon name="logo-google"></ion-icon>
+            <div id="google-sign-in">
+                <img src="https://img.icons8.com/fluency/25/000000/google-logo.png"/>
+                <span style="margin-left: 2px">
+                     Sign in with Google
                 </span>
-                <span>
-                    Sign in with Google
-                </span>
-            </button>
+            </div>
         </div>
         <div style="text-align: center;color: grey;font-weight: 300;margin-top: 2rem;margin-bottom: 2rem">
             new Lovebirds?<u> Create Account</u>

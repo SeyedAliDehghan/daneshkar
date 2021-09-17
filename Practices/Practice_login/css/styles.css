@@ -16,7 +16,7 @@ body {
 
 .login_image {
     grid-area: login_image;
-    background-image: url("../img/bird.jpg");
+    background-image: url("../img/bird.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -34,7 +34,7 @@ body {
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-bottom: 5rem;
+    margin-bottom: 0;
 
 }
 
@@ -42,10 +42,11 @@ body {
     font-size: 2rem;
     color: #adadad;
     font-weight: 400;
+    margin-bottom: 4rem;
 }
 
 .logo-container {
-    width: 300px;
+    width: 150px;
     height: 50px;
     /*text-align: center;*/
     background-image: url("../img/logo.png");
@@ -53,7 +54,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     justify-content: center;
-    margin-bottom: 10rem;
+    margin-bottom: 7rem;
+    margin-top: 3.5rem;
 }
 
 #username, #password {
@@ -71,12 +73,10 @@ body {
     background-color: white;
     border: none;
     color: black;
+    display: flex;
+
 }
 
-ion-icon {
-    font-size: 20px;
-    margin-top: 10px;
-}
 
 .google_div {
 
@@ -86,6 +86,24 @@ ion-icon {
     flex-direction: row;
     justify-content: center;
 
+}
+
+
+hr {
+    border: none;
+    border-top: 5px double black;
+    color: #333;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+}
+
+hr:after {
+    background: #fff;
+    content: 'or';
+    padding: 0 4px;
+    position: relative;
+    top: -13px;
 }
 
 @media screen and (max-width: 700px) {
@@ -99,13 +117,7 @@ ion-icon {
 
     }
 
-    .login_image {
-        grid-area: login_image;
-        background-image: url("../img/bird_v.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
+
 
     .logo-container {
         margin-bottom: 8rem;
@@ -116,6 +128,9 @@ ion-icon {
         font-size: 2rem;
         color: #adadad;
         font-weight: 400;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
+
+
+
 }
