@@ -1,0 +1,212 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 80vw;
+    height: 80vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    /*display: flex;*/
+    flex-direction: row;
+    margin-top: 2rem;
+    align-items: center;
+    clear: both;
+    display: block;
+}
+
+.navbar-menu span {
+    float: right;
+    margin-left: 5rem;
+}
+
+.fa-playstation {
+    font-size: 1.8rem;
+}
+
+.footer {
+
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    /*align-items: center;*/
+}
+
+.footer i {
+    margin-left: 4rem;
+}
+
+.container-body {
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*clear: both;*/
+    /*display: block;*/
+}
+
+.box {
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    width: 30rem;
+    height: 30rem;
+    background: rgb(255, 86, 95);
+    background: linear-gradient(0deg, rgba(255, 86, 95, 1) 0%, rgba(246, 88, 163, 1) 100%);
+
+    border-radius: 2rem 0 0 2rem;
+}
+
+.controller-img {
+    float: right;
+    position: absolute;
+    width: 40rem;
+    margin-top: 5rem;
+    margin-left: -22rem;
+}
+
+.body-img {
+    float: right;
+}
+
+.body-titles {
+    display: inline-block;
+    margin-top: 5rem;
+    line-height: 1rem;
+    margin-left: 1rem;
+}
+
+.title-heads {
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+.title-box {
+    background: rgb(255, 86, 95);
+    background: linear-gradient(0deg, rgba(255, 86, 95, 1) 0%, rgba(246, 88, 163, 1) 100%);
+    display: inline-block;
+    width: 1rem;
+    height: 14rem;
+}
+.main{
+    display: block;
+    flex-direction: column-reverse;
+}
+.titles {
+    display: inline-block;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.nav-icon {
+display: none;
+}
+.price{
+    display: block;
+    margin-left: 2rem;
+}
+.price-text{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.buy-button{
+    margin-top: 1rem;
+    width: 12rem;
+    height: 2.5rem;
+    background: rgb(255,86,95);
+    background: linear-gradient(90deg, rgba(255,86,95,1) 0%, rgba(246,88,163,1) 100%);
+    border: 0;
+    outline: 0;
+    border-radius: .3rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 700px) {
+    .container-body {
+        display: flex;
+        flex-direction: column-reverse;
+        clear: both;
+        /*margin: auto;*/
+        /*width: 100vw;*/
+        /*display: block;*/
+    }
+
+    .navbar-menu {
+        display: none;
+    }
+
+    .container {
+        width: 95vw;
+        height: 100vh;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box {
+        float: right;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-left: auto;
+        width: 18rem;
+        height: 25rem;
+        background: rgb(255, 86, 95);
+        background: linear-gradient(0deg, rgba(255, 86, 95, 1) 0%, rgba(246, 88, 163, 1) 100%);
+        border-radius: 2rem 0 0 2rem;
+    }
+
+    .controller-img {
+        float: right;
+        position: absolute;
+        width: 30rem;
+        margin-top: 5rem;
+        margin-left: -3rem;
+    }
+
+    .body-titles {
+        margin-top: 0;
+        margin-left: 0;
+        /*clear: both;*/
+    }
+
+    .title-heads {
+        display: inline-block;
+    }
+
+    .title-box {
+        /*clear: both;*/
+    }
+
+    .footer {
+        justify-content: center;
+        padding-bottom: 2rem;
+        margin-left: 0;
+        margin-top: 2rem;
+        margin-right:5rem ;
+    }
+
+    .nav-icon{
+        display: inline-block;
+        float: right;
+        margin-right: 1rem;
+        font-size: 1.4rem;
+    }
+    .main{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .price{
+        display: block;
+        justify-content: flex-end;
+    }
+
+}
+
+
