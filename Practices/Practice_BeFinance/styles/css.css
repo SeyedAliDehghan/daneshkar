@@ -1,0 +1,124 @@
+body {
+    font-family: 'Overpass', sans-serif;
+}
+
+.contact-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.contact-head-text {
+    width: 40rem;
+}
+
+.contact-head-text h1 {
+    width: 30rem;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 600;
+    letter-spacing: 0;
+}
+
+.contact-head-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 40rem;
+    height: auto;
+}
+
+.contact-head-info {
+    display: flex;
+    flex-direction: row;
+    /*align-items: center;*/
+    justify-content: space-between;
+}
+
+.contact-head-info p {
+    color: #7f7f7f;
+    width: 30rem;
+    margin-bottom: 1rem;
+}
+
+.contact-head-info h6 {
+    color: #7f7f7f;
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.contact-head-info h4 {
+    color: #045ba8;
+    font-size: 1.5rem;
+    line-height: 2.125rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    margin-top: 0;
+}
+
+/************/
+/* INFO SEC */
+/************/
+.contact-info {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    background-image: url("../img/info-bg.png");
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center top;
+}
+
+.contact-info-content {
+    display: flex;
+    flex-direction: column;
+    /* next line should back*/
+    align-items: center;
+
+}
+.contact-info-head{
+    margin-right: 20rem;
+    margin-bottom: 1rem;
+}
+.contact-info-content h2 {
+    text-align: left;
+    font-size: 3.1rem;
+    line-height: 3.1rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    width: 40rem;
+    float: left;
+}
+
+.contact-info-items {
+    width: 15rem;
+}
+
+.contact-info-ways {
+    display: flex;
+    flex-direction: row;
+    /* next line is test*/
+    /*margin: auto;*/
+}
+
+.contact-info-ways h4 {
+    font-size: 1.5rem;
+    line-height: 2.12rem;
+    font-weight: 600;
+    letter-spacing: 0;
+}
+
+.contact-info-ways h5 {
+    font-size: 1.06rem;
+    line-height: 1.68rem;
+    font-weight: 300;
+    letter-spacing: 0;
+    margin-bottom: 0;
+}
+
+.contact-info-ways p {
+
+    color: #7f7f7f;
+}
