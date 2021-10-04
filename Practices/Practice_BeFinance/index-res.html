@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="styles/css.css">
+    <link rel="stylesheet" href="styles/css-res.css">
     <!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
     <!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
     <!--    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@100;400;800&display=swap" rel="stylesheet">-->
@@ -14,14 +14,18 @@
     <script src="https://kit.fontawesome.com/ca9c175adf.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div style="padding-top: 175px;padding-right: 10%;padding-left: 10%">
+<div class="main-div">
     <div class="contact-head">
         <div class="contact-head-text">
-            <h1>
-                Feel free to
-                contact us
-            </h1>
-            <hr>
+            <div>
+                <h1>
+                    Feel free to
+                    contact us
+                </h1>
+                <hr class="hr">
+
+            </div>
+
             <div class="contact-head-info">
                 <div>
                     <p>
@@ -46,12 +50,12 @@
             </div>
             <div class="contact-info-ways">
                 <div class="contact-info-items">
-                    <img src="img/addres-icon.png" alt="">
+                    <img class="contact-icons" src="img/addres-icon.png" alt="">
                     <h4>Address</h4>
                     <h5>Level 13, 2 Elizabeth St, Melbourne, Victoria 3000, Australia</h5>
                 </div>
                 <div class="contact-info-items">
-                    <img src="img/human.png" alt="">
+                    <img class="contact-icons" src="img/human.png" alt="">
                     <h4>Consultant</h4>
                     <h5>Kevin Perry</h5>
                     <p>
@@ -62,7 +66,7 @@
                     </p>
                 </div>
                 <div class="contact-info-items">
-                    <img src="img/email.png" alt="">
+                    <img class="contact-icons" src="img/email.png" alt="">
                     <h4>E-mail</h4>
                     <h5>noreply@envato.com</h5>
                     <p>
@@ -70,7 +74,7 @@
                     </p>
                 </div>
                 <div class="contact-info-items">
-                    <img src="img/phone.png" alt="">
+                    <img class="contact-icons" src="img/phone.png" alt="">
                     <h4>Phone</h4>
                     <h5>+61 (0) 383 766 284</h5>
                     <p>
@@ -83,7 +87,7 @@
     <div class="contact-form-div">
         <div>
             <div class="contact-form">
-                <div style="width: 35%">
+                <div class="contact-form-head">
                     <div style="display: flex;flex-direction: row;align-items: center">
                         <img src="img/mail.png" alt="">
                         <h5>Contact form</h5>
@@ -108,9 +112,9 @@
                             <label for="radio2">Company</label>
                         </span>
                         </div>
-                        <div style="display:flex;flex-direction: row;width: 100%">
+                        <div class="first-row-contact-form">
                             <input style="" type="text" placeholder="Your Name">
-                            <input style="margin-left: 1rem" type="email" placeholder="E-mail">
+                            <input style="margin-left: 0" type="email" placeholder="E-mail">
                         </div>
                         <div>
                             <input style="width: 100%" type="text" placeholder="Subject">

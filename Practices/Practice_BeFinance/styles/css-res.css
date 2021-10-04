@@ -2,6 +2,12 @@ body {
     font-family: 'Overpass', sans-serif;
 }
 
+.main-div {
+    padding-top: 175px;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
 .contact-head {
     display: flex;
     flex-direction: row;
@@ -78,10 +84,12 @@ body {
     align-items: center;
 
 }
-.contact-info-head{
+
+.contact-info-head {
     margin-right: 20rem;
     margin-bottom: 1rem;
 }
+
 .contact-info-content h2 {
     text-align: left;
     font-size: 3.1rem;
@@ -122,7 +130,8 @@ body {
 
     color: #7f7f7f;
 }
-.contact-form{
+
+.contact-form {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -130,50 +139,57 @@ body {
     padding: 3rem;
     margin-top: 2rem;
 }
-.contact-form h5{
+
+.contact-form-head h5 {
     margin: 5px 0 0 5px;
     font-size: 1.1rem;
     line-height: 1.6rem;
     font-weight: 300;
     letter-spacing: 0;
 }
-.contact-form h2{
+
+.contact-form-head h2 {
     font-size: 3.1rem;
     line-height: 3.1rem;
     font-weight: 600;
     letter-spacing: 0;
 }
-.contact-form h3{
+
+.contact-form-head h3 {
     font-size: 2.1rem;
     line-height: 2.8rem;
     font-weight: 600;
     letter-spacing: 0;
 }
-.contact-form-div{
+
+.contact-form-div {
     background-image: url("../img/back.png");
     background-size: cover;
     background-repeat: repeat;
     background-position: center top;
 }
-.contact-form input{
+
+.contact-form input {
     margin-bottom: 1.1rem;
     color: #808080;
-    background-color: rgba(255,255,255,1);
+    background-color: rgba(255, 255, 255, 1);
     border-width: 0 0 1px 0;
     border-color: #045ba8;
     padding: .9rem;
     outline: none;
 }
-.contact-form textarea{
+
+.contact-form textarea {
     margin-bottom: 1.1rem;
     color: #808080;
-    background-color: rgba(255,255,255,1);
+    background-color: rgba(255, 255, 255, 1);
     border-width: 0 0 1px 0;
     border-color: #045ba8;
     padding: .9rem;
     outline: none;
 }
-.contact-form button{
+
+.contact-form button {
     background-color: #14caf4;
     color: white;
     padding: 0.75rem 1.3rem;
@@ -195,7 +211,8 @@ body {
     margin-top: 2rem;
     width: 100%;
 }
-.employee-info h5{
+
+.employee-info h5 {
     font-size: 1.1rem;
     line-height: 1.6rem;
     font-weight: 300;
@@ -203,17 +220,20 @@ body {
     text-align: right;
     margin-top: 0;
 }
-.employee-info p{
+
+.employee-info p {
     margin: 0 0 15px;
     text-align: right;
     color: #ababab;
     font-weight: 600;
 }
+
 .employee-head-text {
     width: 38%;
     margin-top: 5rem;
 }
-.employee-head-text h2{
+
+.employee-head-text h2 {
     font-size: 3.1rem;
     line-height: 3.1rem;
     font-weight: 600;
@@ -221,7 +241,8 @@ body {
     text-align: right;
     margin-bottom: .2rem;
 }
-.employee-info button{
+
+.employee-info button {
     background-color: #14caf4;
     color: white;
     padding: 0.9rem 1.3rem;
@@ -230,6 +251,99 @@ body {
     float: right;
 }
 
-.employee-info i{
+.employee-info i {
     margin-left: 6px;
+}
+
+.contact-form-head {
+    width: 40%;
+    margin-left: 0;
+}
+
+@media screen and (max-width: 700px) {
+    .contact-head {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .contact-head-info {
+        display: flex;
+        flex-direction: column;
+        /*align-items: center;*/
+        justify-content: space-between;
+    }
+
+    .contact-head-img {
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 25rem;
+        height: auto;
+        margin-top: 5px;
+    }
+
+    .main-div {
+        width: 95vw;
+        padding-top: 175px;
+        /*padding-right: 5%;*/
+        /*padding-left: 5%;*/
+    }
+
+    .hr {
+        display: none;
+    }
+
+    .contact-info-ways {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-info-head {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        width: 99%;
+        float: none;
+    }
+
+    .contact-info-ways {
+        text-align: center;
+    }
+
+    .contact-form-head {
+        width: 50%;
+        margin-left: 0;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        /*align-items: center;*/
+        /*justify-content: center;*/
+        padding: 3rem;
+        margin-top: 2rem;
+    }
+
+    .contact-form-head h2 {
+        font-size: 2.3rem;
+        line-height: 2.3rem;
+        font-weight: 600;
+        letter-spacing: 0;
+    }
+
+    .contact-form-head h3 {
+
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        letter-spacing: 0;
+    }
+    .first-row-contact-form{
+        display:flex;
+        flex-direction: column;
+        /*width: 100%;*/
+    }
+    .employee-sec {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
 }
