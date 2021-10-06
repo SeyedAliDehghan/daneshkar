@@ -1,10 +1,10 @@
-function food(name,type,price,deliverTime,rate,comments,isReady,rateCount){
+function food(name,type,price,deliverTime,comments,isReady,rateCount){
     this.name=name;
     this.type=type;
     this.price=price;
     this.deliverTime=deliverTime;
-    this.rate=rate;
-    this.ratecount=rateCount;
+    this.rate=0;
+    this.ratecount=0
     this.comments=comments;
     this.isReady=isReady;
     this.order=function (isPremium){
@@ -25,18 +25,27 @@ function food(name,type,price,deliverTime,rate,comments,isReady,rateCount){
         console.log("New comment added and the comments are like this now:",comments)
     };
     this.setRate=function (newRate){
-      if (rate===undefined){
+      if (this.ratecount==0){
           this.rate=newRate;
-          console.log("new rate added and its:",this.rate);
+          this.ratecount+=1;
+          console.log("first rate added and its:",this.rate);
+          console.log("now rate count: ",this.ratecount)
       }else{
-          this.rate=(newRate+this.rate)
+          let AVrate=this.rate*this.ratecount;
+          let newAVrate=AVrate+newRate;
+          this.ratecount++;
+          console.log("rate count=",this.ratecount)
+          this.rate=newAVrate/this.ratecount;
+          console.log("new rate for this food is ", this.rate)
       }
     };
 }
 let comment1=[];
-const newfood= new food('pizza','fastfood',5000,5,undefined,comment1,false);
+const newfood= new food('pizza','fastfood',5000,5,comment1,false);
 // console.log(newfood);
 // newfood.order(true);
 // newfood.addComment("kossher")
 // newfood.addComment("tokhmi")
-// newfood.setRate(5);
+newfood.setRate(5);
+newfood.setRate(5);
+newfood.setRate(0);
