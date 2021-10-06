@@ -1,7 +1,7 @@
 body {
     font-family: 'Overpass', sans-serif;
+    width: 100vw;
 }
-
 .main-div {
     padding-top: 175px;
     padding-right: 10%;
@@ -102,6 +102,8 @@ body {
 
 .contact-info-items {
     width: 15rem;
+    /*display: flex;*/
+    /*flex-direction: column;*/
 }
 
 .contact-info-ways {
@@ -160,6 +162,7 @@ body {
     line-height: 2.8rem;
     font-weight: 600;
     letter-spacing: 0;
+    width: 40rem;
 }
 
 .contact-form-div {
@@ -256,8 +259,9 @@ body {
 }
 
 .contact-form-head {
-    width: 40%;
-    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
 }
 
 @media screen and (max-width: 700px) {
@@ -296,6 +300,7 @@ body {
     .contact-info-ways {
         display: flex;
         flex-direction: column;
+
     }
 
     .contact-info-head {
@@ -323,11 +328,12 @@ body {
         margin-top: 2rem;
     }
 
-    .contact-form-head h2 {
+    .contact-info-head h2 {
         font-size: 2.3rem;
         line-height: 2.3rem;
         font-weight: 600;
         letter-spacing: 0;
+        width: 27rem;
     }
 
     .contact-form-head h3 {
@@ -335,6 +341,7 @@ body {
         font-size: 1.6rem;
         line-height: 2.2rem;
         letter-spacing: 0;
+        width: 30rem;
     }
     .first-row-contact-form{
         display:flex;
@@ -345,5 +352,22 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+    }
+    .contact-info-ways{
+        margin-left: -6rem;
+    }
+    .contact-form{
+        padding: 0;
+    }
+    .contact-form-head{
+        margin-left: -19rem;
+
+    }
+    .contact-form-head h2{
+        width: 25rem;
+    }
+    .employee-head-text{
+        margin-left: 3rem;
+        width: 25rem;
     }
 }
