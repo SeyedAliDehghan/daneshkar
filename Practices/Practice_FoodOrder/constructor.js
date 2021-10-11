@@ -1,4 +1,5 @@
-function food(name,type,price,deliverTime,comments,isReady,rateCount){
+function food(name,type,price,deliverTime,isReady,rateCount){
+    let comments=[];
     this.name=name;
     this.type=type;
     this.price=price;
@@ -22,7 +23,7 @@ function food(name,type,price,deliverTime,comments,isReady,rateCount){
     };
     this.addComment=function (newCM){
         comments.push(newCM);
-        console.log("New comment added and the comments are like this now:",comments)
+        // console.log("New comment added and the comments are like this now:",comments)
     };
     this.setRate=function (newRate){
       if (this.ratecount==0){
@@ -40,12 +41,26 @@ function food(name,type,price,deliverTime,comments,isReady,rateCount){
       }
     };
 }
-let comment1=[];
-const newfood= new food('pizza','fastfood',5000,5,comment1,false);
-// console.log(newfood);
+function comment(author,date,rate,text,whichFood){
+    this.author=author;
+    this.date=date;
+    this.rate=rate;
+    this.text=text;
+    this.setRate=function (rate){
+        // console.log("rar=",rate)
+        whichFood.setRate(rate);
+    };
+    this.setRate(rate);
+}
+// let comment1=[];
+const newfood= new food('pizza','fastfood',5000,5,false);
+const newCm=new comment("mamad","03/04",5,"fine",newfood)
+const secCm=new comment("ali","03/04",0,"bad",newfood)
+
 // newfood.order(true);
-// newfood.addComment("kossher")
-// newfood.addComment("tokhmi")
-newfood.setRate(5);
-newfood.setRate(5);
-newfood.setRate(0);
+newfood.addComment(newCm);
+newfood.addComment(secCm);
+console.log(newfood);
+// newfood.setRate(5);
+// newfood.setRate(5);
+// newfood.setRate(0);
