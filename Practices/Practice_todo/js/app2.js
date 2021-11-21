@@ -1,6 +1,6 @@
-// Vid = 43:15
-//localStorage.clear();
 
+//localStorage.clear();
+// Count Todos
 //  === Selectors ===
 
 const todoInput = document.querySelector('.todo-input');
@@ -10,12 +10,14 @@ const todoList = document.querySelector('.todo-list');
 const filterAll = document.querySelector('.allFilter');
 const filterActive = document.querySelector('.activeFilter');
 const filterCompleted = document.querySelector('.completedFilter');
+const clearComplete=document.querySelector('.clearComplete');
+const todoCount=document.querySelector('.todoCount');
 
 // === Event Listeners ===
 filterAll.addEventListener('click',allFilter);
 filterActive.addEventListener('click', activeFilter)
 filterCompleted.addEventListener('click', completedFilter)
-
+clearComplete.addEventListener('click',clearCompleteFunction)
 document.addEventListener('DOMContentLoaded', getTodos);
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
@@ -54,6 +56,8 @@ function addTodo(event) {
 
     // Clear Todo Input
     todoInput.value = "";
+    // Count Todos
+    todoCountFunction()
 }
 
 function deleteCheck(event) {
@@ -144,6 +148,8 @@ function saveLocalTodos(todo) {
 }
 
 function getTodos() {
+    // Count Todos
+    todoCountFunction()
     let todos = checkLocalStorage();
     let counter = -1;
     todos.forEach(function (todo) {
@@ -178,6 +184,7 @@ function getTodos() {
 }
 
 function removeLocalTodos(todo) {
+
     let todos = checkLocalStorage();
     let indx;
     for (let i=0;i<todos.length;i++){
@@ -188,6 +195,8 @@ function removeLocalTodos(todo) {
     // const todoIndex = todo.children[0].innerText;
     todos.splice(indx,1);
     localStorage.setItem('todos', JSON.stringify(todos));
+    // Count Todos
+    todoCountFunction()
 }
 
 function checkLocalStorage(todos) {
@@ -199,6 +208,7 @@ function checkLocalStorage(todos) {
 }
 
 function done(todo) {
+
     todo.classList.toggle("completed");
     let todos = checkLocalStorage();
     const todoIndex = todo.children[1].innerText;
@@ -208,11 +218,49 @@ function done(todo) {
             fIndex = i;
         }
     }
-    console.log(fIndex)
+    // console.log(fIndex)
     if (!todos[fIndex][1] === true) {
         todos[fIndex][1] = true;
     } else {
         todos[fIndex][1] = false;
     }
+
     localStorage.setItem('todos', JSON.stringify(todos));
+    // Count Todos
+    todoCountFunction()
+}
+function clearCompleteFunction(){
+    let todos = checkLocalStorage();
+    // // console.log(todoList.children[1].classList.contains('completed'));
+    // let doneIndx=[];
+    // console.log(todoList.children[1].innerText);
+    // console.log(todos[0][0])
+    for (let i=0;i<todos.length;i++){
+        if (todoList.children[i].classList.contains('completed')){
+            // console.log(todoList.children[i].innerText);
+            for (let j=0;j<todos.length;j++){
+                if (todos[j][0]===todoList.children[i].innerText){
+                    todos.splice(j,1);
+                    todoList.children[i].remove();
+                    localStorage.setItem('todos', JSON.stringify(todos));
+                }
+            }
+        }
+        todos = checkLocalStorage();
+    }
+    // Count Todos
+    todoCountFunction()
+
+    // todoList.childNodes[i].remove();
+}
+
+function todoCountFunction(){
+    let todos = checkLocalStorage();
+    let count=0;
+    for (let i=0;i<todos.length;i++){
+        if (!todos[i][1]===true) {
+            count++;
+        }
+    }
+    todoCount.innerText=count;
 }
