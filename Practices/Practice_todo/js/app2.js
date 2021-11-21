@@ -179,8 +179,14 @@ function getTodos() {
 
 function removeLocalTodos(todo) {
     let todos = checkLocalStorage();
-    const todoIndex = todo.children[0].innerText;
-    todos.splice(todos.indexOf(todoIndex, 1));
+    let indx;
+    for (let i=0;i<todos.length;i++){
+        if (todos[i][0]===todo.children[1].innerText){
+            indx=i;
+        }
+    }
+    // const todoIndex = todo.children[0].innerText;
+    todos.splice(indx,1);
     localStorage.setItem('todos', JSON.stringify(todos));
 }
 
