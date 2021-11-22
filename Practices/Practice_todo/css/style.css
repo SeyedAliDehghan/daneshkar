@@ -3,69 +3,143 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --primary:#fff;
+    --secondary: #a8a8a8;
+    --third:#e4e5f1;
+    --text-color: #5e5e5e;
+}
+.icon{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    background-image: url("../img/sun.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+.sun{
+    background-image: url("../img/sun.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+.moon{
+    background-image: url("../img/moon.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+.container{
+    background-image: url("../img/bg.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    /*max-width: 540px;*/
+}
 
 body {
-    background-image: linear-gradient(120deg, #f6d365, #fda085);
+    /*background: black;*/
+    /*background-image: linear-gradient(120deg, #f6d365, #fda085);*/
     font-family: 'Poppins', sans-serif;
     color: white;
     min-height: 100vh;
 }
 
-header {
+
+.header{
     font-size: 1.5rem;
+    min-height: 20vh;
+    width: 30vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header, form {
+form {
     min-height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-form input, form button {
-    padding: 0.5rem;
+/*form input, form button {*/
+/*    padding: 0.5rem;*/
+/*    font-size: 2rem;*/
+/*    border: none;*/
+/*    background: white;*/
+/*}*/
+.todo-input{
+    border-radius: 0 0.5rem 0.5rem 0;
+    padding: 1rem;
     font-size: 2rem;
     border: none;
-    background: white;
-}
+    outline: none;
+    background: var(--primary);
+    color: var(--text-color);
 
+}
+.todo-button{
+    border-radius: 0.5rem 0 0 0.5rem;
+    padding: 1rem;
+    font-size: 2rem;
+    border: none;
+    background: var(--primary);
+}
+form{
+    margin-top: -2rem;
+}
 form button {
-    color: #fda085;
-    background: white;
+    color: var(--secondary);
+    background: var(--primary);
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
-form button:hover {
-    background: #ff6f47;
-    color: white;
-}
-
-.todo-container {
-    display: flex;
+::placeholder{
+    font-size: 1rem;
     justify-content: center;
     align-items: center;
+    color: var(--secondary);
+}
+
+.fa-circle{
+    opacity: 40%;
+}
+
+
+
+.todo-container {
+    margin-top: -1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     border-radius: 0.5rem;
-    background-color: white;
+    background-color: var(--primary);
     width: 40%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+
+
 }
 
 .todo-list {
-    min-width: 30%;
+    min-width: 100%;
     list-style: none;
 }
-
+.todo-list li:first-of-type{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
 .todo {
     margin: 0;
-    background: white;
+    background: var(--primary);
     color: black;
     font-size: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: all 0.3s ease;
-    padding: 0.2rem;
+    padding: 1rem;
+    border-bottom: 1px solid var(--third);
 
 }
 
@@ -77,8 +151,6 @@ form button:hover {
 }
 
 .trash-btn, .complete-btn {
-    background: #ff6f47;
-    color: white;
     border: none;
     padding: 1rem;
     cursor: pointer;
@@ -86,29 +158,34 @@ form button:hover {
 }
 
 .complete-btn {
-    background-color: white;
-    color: #fda085;
+    background-color: var(--primary);
+    color: var(--secondary);
     border-radius: 50%;
-    border: 0.15rem solid #fda085;
-    padding: 0.5rem;
+    opacity: 30%;
+    border: 0.2rem solid var(--secondary);
     /*margin-left: 1rem;*/
 }
 
 .trash-btn {
-    padding: 0.5rem;
+    opacity: 50%;
+    color: var(--secondary);
+    background: var(--primary);
 }
 
 .todo-item {
     padding: 0 0.5rem;
+    color: var(--text-color);
 }
 
-.fa-trash, .fa-check {
+.fa-times, .fa-check {
     pointer-events: none;
 }
-
+.fa-times{
+    pointer-events: none;
+}
 .completed {
     text-decoration: line-through;
-    opacity: 0.5;
+    opacity: 0.3;
 }
 
 select {
@@ -143,4 +220,28 @@ select{
 .select:hover::after{
     background: white;
     color: #ff6f47;
+}
+.todoControl{
+    padding: 1rem;
+    color: grey;
+    display: flex;
+    flex-direction: row;
+    float: right;
+    justify-content: space-between;
+    width: 100%;
+}
+.todoControl span{
+    margin-left: 0.5rem;
+}
+.allFilter,.activeFilter,.completedFilter{
+    cursor: pointer;
+}
+.bold{
+    font-weight: bold;
+}
+.clearComplete{
+    cursor: pointer;
+}
+.todoCount{
+    cursor: pointer;
 }
