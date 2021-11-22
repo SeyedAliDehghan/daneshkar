@@ -1,7 +1,8 @@
 
-//localStorage.clear();
+// localStorage.clear();
 // Count Todos
 //  === Selectors ===
+var root = document.querySelector(':root');
 
 const todoInput = document.querySelector('.todo-input');
 const todoButton = document.querySelector('.todo-button');
@@ -12,13 +13,18 @@ const filterActive = document.querySelector('.activeFilter');
 const filterCompleted = document.querySelector('.completedFilter');
 const clearComplete=document.querySelector('.clearComplete');
 const todoCount=document.querySelector('.todoCount');
+const container=document.querySelector('.container')
+
+const icon=document.querySelector('.icon');
 
 // === Event Listeners ===
+icon.addEventListener('click',switchTheme);
 filterAll.addEventListener('click',allFilter);
 filterActive.addEventListener('click', activeFilter)
 filterCompleted.addEventListener('click', completedFilter)
 clearComplete.addEventListener('click',clearCompleteFunction)
 document.addEventListener('DOMContentLoaded', getTodos);
+document.addEventListener('DOMContentLoaded', checkTheme);
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
 //filterOption.addEventListener('click', filterTodo)
@@ -263,4 +269,50 @@ function todoCountFunction(){
         }
     }
     todoCount.innerText=count;
+}
+function switchTheme(){
+    if (icon.classList.contains('sun')){
+        goDark()
+
+    }else if (icon.classList.contains('moon')){
+        goLight()
+
+    }
+}
+function goDark(){
+    icon.classList.remove('sun')
+    icon.classList.add('moon');
+    container.style.backgroundImage="url('img/bg-dark.png')";
+    document.body.style.background="#161722";
+    root.style.setProperty('--primary',"#25273C")
+    root.style.setProperty('--third',"#49494f")
+
+    root.style.setProperty('--text-color',"#c5c5c5")
+
+    localStorage.setItem("theme","dark")
+}
+function goLight(){
+    icon.classList.remove('moon');
+    icon.classList.add('sun')
+    container.style.backgroundImage="url('img/bg.jpg')";
+    root.style.setProperty('--primary',"white")
+    document.body.style.background="white";
+    root.style.setProperty('--primary',"#fff")
+    root.style.setProperty('--third',"#e4e5f1")
+    root.style.setProperty('--text-color',"#5e5e5e")
+    localStorage.setItem("theme","light")
+}
+function checkTheme(){
+    if (localStorage.getItem('theme') === null) {
+        goLight()
+        // console.log("red")
+
+    }else{
+        if (localStorage.getItem('theme')==='light'){
+            goLight();
+        }else{
+            goDark();
+        }
+    }
+    // localStorage.getItem('theme')
 }
