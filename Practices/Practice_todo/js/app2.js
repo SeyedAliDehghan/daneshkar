@@ -1,4 +1,3 @@
-
 // localStorage.clear();
 // Count Todos
 //  === Selectors ===
@@ -11,18 +10,18 @@ const todoList = document.querySelector('.todo-list');
 const filterAll = document.querySelector('.allFilter');
 const filterActive = document.querySelector('.activeFilter');
 const filterCompleted = document.querySelector('.completedFilter');
-const clearComplete=document.querySelector('.clearComplete');
-const todoCount=document.querySelector('.todoCount');
-const container=document.querySelector('.container')
+const clearComplete = document.querySelector('.clearComplete');
+const todoCount = document.querySelector('.todoCount');
+const container = document.querySelector('.container')
 
-const icon=document.querySelector('.icon');
+const icon = document.querySelector('.icon');
 
 // === Event Listeners ===
-icon.addEventListener('click',switchTheme);
-filterAll.addEventListener('click',allFilter);
+icon.addEventListener('click', switchTheme);
+filterAll.addEventListener('click', allFilter);
 filterActive.addEventListener('click', activeFilter)
 filterCompleted.addEventListener('click', completedFilter)
-clearComplete.addEventListener('click',clearCompleteFunction)
+clearComplete.addEventListener('click', clearCompleteFunction)
 document.addEventListener('DOMContentLoaded', getTodos);
 document.addEventListener('DOMContentLoaded', checkTheme);
 todoButton.addEventListener('click', addTodo);
@@ -120,6 +119,7 @@ function allFilter(e) {
         todo.style.display = "flex";
     });
 }
+
 function activeFilter(e) {
     filterAll.classList.remove("bold")
     filterActive.classList.toggle("bold")
@@ -133,6 +133,7 @@ function activeFilter(e) {
         }
     });
 }
+
 function completedFilter(e) {
     filterAll.classList.remove("bold")
     filterActive.classList.remove("bold")
@@ -146,6 +147,7 @@ function completedFilter(e) {
         }
     });
 }
+
 function saveLocalTodos(todo) {
     // CHECK IS IT ON LOCAL ANYTHING?
     let todos = checkLocalStorage();
@@ -193,13 +195,13 @@ function removeLocalTodos(todo) {
 
     let todos = checkLocalStorage();
     let indx;
-    for (let i=0;i<todos.length;i++){
-        if (todos[i][0]===todo.children[1].innerText){
-            indx=i;
+    for (let i = 0; i < todos.length; i++) {
+        if (todos[i][0] === todo.children[1].innerText) {
+            indx = i;
         }
     }
     // const todoIndex = todo.children[0].innerText;
-    todos.splice(indx,1);
+    todos.splice(indx, 1);
     localStorage.setItem('todos', JSON.stringify(todos));
     // Count Todos
     todoCountFunction()
@@ -235,82 +237,100 @@ function done(todo) {
     // Count Todos
     todoCountFunction()
 }
-function clearCompleteFunction(){
+
+function clearCompleteFunction() {
     let todos = checkLocalStorage();
     // // console.log(todoList.children[1].classList.contains('completed'));
     // let doneIndx=[];
     // console.log(todoList.children[1].innerText);
     // console.log(todos[0][0])
-    for (let i=0;i<todos.length;i++){
-        if (todoList.children[i].classList.contains('completed')){
-            // console.log(todoList.children[i].innerText);
-            for (let j=0;j<todos.length;j++){
-                if (todos[j][0]===todoList.children[i].innerText){
-                    todos.splice(j,1);
-                    todoList.children[i].remove();
-                    localStorage.setItem('todos', JSON.stringify(todos));
-                }
+    // for (let i=0;i<todos.length;i++){
+    //     if (todoList.children[i].classList.contains('completed')){
+    //         console.log("counted")
+    //         for (let j=0;j<todos.length;j++){
+    //             if (todos[j][0]===todoList.children[i].innerText){
+    //                 todos.splice(j,1);
+    //                 todoList.children[i].remove();
+    //                 localStorage.setItem('todos', JSON.stringify(todos));
+    //                 i++;
+    //             }
+    //         }
+    //     }
+    //     todos = checkLocalStorage();
+    // }
+
+    const completedToDos = document.querySelectorAll(".completed")
+    completedToDos.forEach(todo => {
+        todo.remove();
+        // console.log(todo.children[1].innerText);
+        for (let i=0;i<todos.length;i++) {
+            if (todos[i][0] === todo.children[1].innerText){
+                todos.splice(i,1);
+
             }
         }
-        todos = checkLocalStorage();
-    }
-    // Count Todos
-    todoCountFunction()
-
-    // todoList.childNodes[i].remove();
+    });
+    localStorage.setItem('todos', JSON.stringify(todos));
+// Count Todos
+todoCountFunction()
+// todoList.childNodes[i].remove();
 }
 
-function todoCountFunction(){
+function todoCountFunction() {
     let todos = checkLocalStorage();
-    let count=0;
-    for (let i=0;i<todos.length;i++){
-        if (!todos[i][1]===true) {
+    let count = 0;
+    for (let i = 0; i < todos.length; i++) {
+        if (!todos[i][1] === true) {
             count++;
         }
     }
-    todoCount.innerText=count;
+    todoCount.innerText = count;
 }
-function switchTheme(){
-    if (icon.classList.contains('sun')){
+
+function switchTheme() {
+    if (icon.classList.contains('sun')) {
         goDark()
 
-    }else if (icon.classList.contains('moon')){
+    } else if (icon.classList.contains('moon')) {
         goLight()
 
     }
 }
-function goDark(){
+
+function goDark() {
     icon.classList.remove('sun')
     icon.classList.add('moon');
-    container.style.backgroundImage="url('img/bg-dark.png')";
-    document.body.style.background="#161722";
-    root.style.setProperty('--primary',"#25273C")
-    root.style.setProperty('--third',"#49494f")
+    container.style.backgroundImage = "url('img/bg-dark.png')";
+    document.body.style.background = "#161722";
+    root.style.setProperty('--primary', "#25273C")
+    root.style.setProperty('--third', "#49494f")
 
-    root.style.setProperty('--text-color',"#c5c5c5")
+    root.style.setProperty('--text-color', "#c5c5c5")
 
-    localStorage.setItem("theme","dark")
+    localStorage.setItem("theme", "dark")
 }
-function goLight(){
+
+function goLight() {
     icon.classList.remove('moon');
     icon.classList.add('sun')
-    container.style.backgroundImage="url('img/bg.jpg')";
-    root.style.setProperty('--primary',"white")
-    document.body.style.background="white";
-    root.style.setProperty('--primary',"#fff")
-    root.style.setProperty('--third',"#e4e5f1")
-    root.style.setProperty('--text-color',"#5e5e5e")
-    localStorage.setItem("theme","light")
+    container.style.backgroundImage = "url('img/bg.jpg')";
+    root.style.setProperty('--primary', "white")
+    document.body.style.background = "white";
+    root.style.setProperty('--primary', "#fff")
+    root.style.setProperty('--third', "#e4e5f1")
+    root.style.setProperty('--text-color', "#5e5e5e")
+    localStorage.setItem("theme", "light")
 }
-function checkTheme(){
+
+function checkTheme() {
     if (localStorage.getItem('theme') === null) {
         goLight()
         // console.log("red")
 
-    }else{
-        if (localStorage.getItem('theme')==='light'){
+    } else {
+        if (localStorage.getItem('theme') === 'light') {
             goLight();
-        }else{
+        } else {
             goDark();
         }
     }
