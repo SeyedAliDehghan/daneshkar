@@ -296,10 +296,10 @@ function todoCountFunction() {
 }
 
 function switchTheme() {
-    if (icon.classList.contains('sun')) {
+    if (icon.classList.contains('moon')) {
         goDark()
 
-    } else if (icon.classList.contains('moon')) {
+    } else if (icon.classList.contains('sun')) {
         goLight()
 
     }
