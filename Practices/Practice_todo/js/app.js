@@ -12,7 +12,7 @@ const filterActive = document.querySelector('.activeFilter');
 const filterCompleted = document.querySelector('.completedFilter');
 const clearComplete = document.querySelector('.clearComplete');
 const todoCount = document.querySelector('.todoCount');
-const container = document.querySelector('.container')
+const container = document.querySelector('.container');
 
 const icon = document.querySelector('.icon');
 
@@ -173,11 +173,17 @@ function getTodos() {
         const completedButton = document.createElement('button');
         // completedButton.innerHTML = '<i class="fas fa-check"></i>';
         completedButton.classList.add('complete-btn');
+        if (todos[counter][1] === true) {
+            completedButton.classList.add('completedBtn');
+        }
         todoDiv.appendChild(completedButton);
         // Create Li
         const newTodo = document.createElement('span');
         newTodo.innerText = todo[0];
         newTodo.classList.add('todo-item');
+        if (todos[counter][1] === true) {
+            newTodo.classList.add('lowOpacity');
+        }
         todoDiv.appendChild(newTodo);
         // Check trash button
         const trashButton = document.createElement('button');
@@ -218,6 +224,8 @@ function checkLocalStorage(todos) {
 function done(todo) {
 
     todo.classList.toggle("completed");
+    todo.children[0].classList.toggle("completedBtn");
+    todo.children[1].classList.toggle("lowOpacity");
     let todos = checkLocalStorage();
     const todoIndex = todo.children[1].innerText;
     let fIndex;
@@ -298,8 +306,8 @@ function switchTheme() {
 }
 
 function goDark() {
-    icon.classList.remove('sun')
-    icon.classList.add('moon');
+    icon.classList.remove('moon')
+    icon.classList.add('sun');
     container.style.backgroundImage = "url('img/bg-dark.png')";
     document.body.style.background = "#161722";
     root.style.setProperty('--primary', "#25273C")
@@ -311,8 +319,8 @@ function goDark() {
 }
 
 function goLight() {
-    icon.classList.remove('moon');
-    icon.classList.add('sun')
+    icon.classList.remove('sun');
+    icon.classList.add('moon')
     container.style.backgroundImage = "url('img/bg.jpg')";
     root.style.setProperty('--primary', "white")
     document.body.style.background = "white";

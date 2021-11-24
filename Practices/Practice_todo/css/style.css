@@ -41,13 +41,17 @@ body {
     color: white;
     min-height: 100vh;
 }
-
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    margin: auto;
+}
 
 .header{
     font-size: 1.5rem;
     min-height: 20vh;
-    width: 30vw;
-    margin: auto;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,10 +60,12 @@ body {
 form {
     min-height: 20vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
-
+form input{
+    width: 100%;
+}
 /*form input, form button {*/
 /*    padding: 0.5rem;*/
 /*    font-size: 2rem;*/
@@ -113,7 +119,7 @@ form button {
     align-items: center;
     border-radius: 0.5rem;
     background-color: var(--primary);
-    width: 40%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0 3px 3px rgba(0,0,0,0.2);
@@ -149,7 +155,9 @@ form button {
 
 
 }
-
+.lowOpacity{
+    opacity: 0.4;
+}
 .trash-btn, .complete-btn {
     border: none;
     padding: 1rem;
@@ -157,24 +165,40 @@ form button {
     font-size: 1rem;
 }
 
+.trash-btn i{
+    font-size: 1.5rem;
+}
 .complete-btn {
     background-color: var(--primary);
     color: var(--secondary);
     border-radius: 50%;
-    opacity: 30%;
-    border: 0.2rem solid var(--secondary);
+    opacity: 50%;
+    border: 0.1rem solid var(--secondary);
     /*margin-left: 1rem;*/
+}
+.completedBtn{
+    border: 0.1rem solid var(--secondary);
+    background: url(../img/check.png),linear-gradient(
+            83deg,#57ddff,#c058f3);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    opacity: 100%;
 }
 
 .trash-btn {
-    opacity: 50%;
+    opacity: 0;
     color: var(--secondary);
     background: var(--primary);
+    transition: all 0.2s;
 }
-
+li:hover  .trash-btn{
+    opacity: 100;
+}
 .todo-item {
     padding: 0 0.5rem;
     color: var(--text-color);
+    width: 100%;
+    margin-left: 0.5rem;
 }
 
 .fa-times, .fa-check {
@@ -185,7 +209,7 @@ form button {
 }
 .completed {
     text-decoration: line-through;
-    opacity: 0.3;
+    /*opacity: 0.3;*/
 }
 
 select {
