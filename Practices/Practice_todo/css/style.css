@@ -37,7 +37,7 @@
 body {
     /*background: black;*/
     /*background-image: linear-gradient(120deg, #f6d365, #fda085);*/
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     color: white;
     min-height: 100vh;
 }
@@ -103,6 +103,7 @@ form button {
     justify-content: center;
     align-items: center;
     color: var(--secondary);
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .fa-circle{
@@ -152,8 +153,9 @@ form button {
 .todo li {
     flex: 1;
     /*margin-left: 0.5rem;*/
-
-
+}
+li{
+    cursor: grab;
 }
 .lowOpacity{
     opacity: 0.4;
