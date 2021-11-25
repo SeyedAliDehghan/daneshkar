@@ -7,9 +7,9 @@ const todoInput = document.querySelector('.todo-input');
 const todoButton = document.querySelector('.todo-button');
 const todoList = document.querySelector('.todo-list');
 //const filterOption = document.querySelector('.filter-todo');
-const filterAll = document.querySelector('.allFilter');
-const filterActive = document.querySelector('.activeFilter');
-const filterCompleted = document.querySelector('.completedFilter');
+const filterAll = document.getElementsByClassName('allFilter');
+const filterActive = document.getElementsByClassName('activeFilter');
+const filterCompleted = document.getElementsByClassName('completedFilter');
 const clearComplete = document.querySelector('.clearComplete');
 const todoCount = document.querySelector('.todoCount');
 const container = document.querySelector('.container');
@@ -18,10 +18,13 @@ const icon = document.querySelector('.icon');
 
 // === Event Listeners ===
 icon.addEventListener('click', switchTheme);
-filterAll.addEventListener('click', allFilter);
-filterActive.addEventListener('click', activeFilter)
-filterCompleted.addEventListener('click', completedFilter)
-clearComplete.addEventListener('click', clearCompleteFunction)
+filterAll[0].addEventListener('click', allFilter);
+filterActive[0].addEventListener('click', activeFilter);
+filterCompleted[0].addEventListener('click', completedFilter);
+filterAll[1].addEventListener('click', allFilter);
+filterActive[1].addEventListener('click', activeFilter);
+filterCompleted[1].addEventListener('click', completedFilter);
+clearComplete.addEventListener('click', clearCompleteFunction);
 document.addEventListener('DOMContentLoaded', getTodos);
 document.addEventListener('DOMContentLoaded', checkTheme);
 todoButton.addEventListener('click', addTodo);
@@ -111,9 +114,12 @@ function filterTodo(e) {
 }
 
 function allFilter(e) {
-    filterAll.classList.toggle("bold")
-    filterActive.classList.remove("bold")
-    filterCompleted.classList.remove("bold")
+    filterAll[0].classList.toggle("bold")
+    filterActive[0].classList.remove("bold")
+    filterCompleted[0].classList.remove("bold")
+    filterAll[1].classList.toggle("bold")
+    filterActive[1].classList.remove("bold")
+    filterCompleted[1].classList.remove("bold")
     const todos = todoList.childNodes;
     todos.forEach(function (todo) {
         todo.style.display = "flex";
@@ -121,9 +127,12 @@ function allFilter(e) {
 }
 
 function activeFilter(e) {
-    filterAll.classList.remove("bold")
-    filterActive.classList.toggle("bold")
-    filterCompleted.classList.remove("bold")
+    filterAll[0].classList.remove("bold")
+    filterActive[0].classList.toggle("bold")
+    filterCompleted[0].classList.remove("bold")
+    filterAll[1].classList.remove("bold")
+    filterActive[1].classList.toggle("bold")
+    filterCompleted[1].classList.remove("bold")
     const todos = todoList.childNodes;
     todos.forEach(function (todo) {
         if (!todo.classList.contains('completed')) {
@@ -135,9 +144,12 @@ function activeFilter(e) {
 }
 
 function completedFilter(e) {
-    filterAll.classList.remove("bold")
-    filterActive.classList.remove("bold")
-    filterCompleted.classList.toggle("bold")
+    filterAll[0].classList.remove("bold")
+    filterActive[0].classList.remove("bold")
+    filterCompleted[0].classList.toggle("bold")
+    filterAll[1].classList.remove("bold")
+    filterActive[1].classList.remove("bold")
+    filterCompleted[1].classList.toggle("bold")
     const todos = todoList.childNodes;
     todos.forEach(function (todo) {
         if (todo.classList.contains('completed')) {

@@ -5,14 +5,16 @@
     <title>ToDo List</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
 </head>
 <body>
 
 <div class="container">
-    <span>.</span>
+<!--    <span>.</span>-->
     <div class="main">
         <span class="header">
             <h1>TODO</h1>
@@ -31,7 +33,7 @@
                     <span class="todoCount"></span>
                     <span> item left</span>
                 </div>
-                <div>
+                <div class="filterSection">
                     <span class="allFilter">All</span>
                     <span class="activeFilter">Active</span>
                     <span class="completedFilter">Completed</span>
@@ -39,6 +41,11 @@
 
                 <div class="clearComplete">Clear Complete</div>
             </div>
+        </div>
+        <div class="filterSectionMob">
+            <span class="filterOptions allFilter">All</span>
+            <span class="filterOptions activeFilter">Active</span>
+            <span class="filterOptions completedFilter">Completed</span>
         </div>
     </div>
     </div>
