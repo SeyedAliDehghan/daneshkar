@@ -1,10 +1,13 @@
 function isEqual(obj1,obj2){
     return JSON.stringify(obj1) === JSON.stringify(obj2);
 }
-function isSame(obj1,obj2) {
-    let obj1Keys = Object.keys(obj1).sort();
-    let obj2Keys = Object.keys(obj2).sort();
-    return JSON.stringify(obj1Keys) === JSON.stringify(obj2Keys);
+const isSame = (obj1, obj2) => {
+    for (let key in obj1) {
+        if (obj1[key] !== obj2[key]) {
+            return false
+        }
+    }
+    return true
 }
 
 const obj1 = { key0: false, key1: 'val1', key2: 20, key3: [0, 1, 2], key4: {name: 'mohammad'}, };
